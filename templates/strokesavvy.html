@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>StrokeSavvy</title>
+</head>
+
+<body>
+    <h1>StrokeSavvy</h1>
+    <p>Enter the following details:-</p>
+
+    <div class="section">
+        <div class="container">
+
+            <form action="{{url_for('home')}}" method="POST" >
+                <div class="column">
+                    <div class="parameters">
+                        <label for="gender"><b>Gender</b></label>
+                        <br>
+
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Gender</label>
+                            <select name="gender" class="form-select" id="gender">
+                                <option selected>Choose...</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="parameters">
+                    <label for="age"> <b> Age</b></label>
+                    <br>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Age</label>
+                        <select name="age" class="form-select" id="age">
+                            <option selected>Choose...</option>
+                            <option value="1">0-18</option>
+                            <option value="2">18-36</option>
+                            <option value="3">36-54</option>
+                            <option value="4">54-72</option>
+                            <option value="5">72-90</option>
+
+                        </select>
+                    </div>
+
+                </div>
+                <div class="parameters">
+                    <label for="ever_married"> <b>Marriage Status</b><em>(ever married)</em> </label>
+                    <br>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Marriage Status</label>
+                        <select class="form-select" id="ever_married">
+                            <option selected>Choose...</option>
+                            <option value="1">Yes</option>
+                            <option value="2">No</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="parameters">
+
+
+                    <label for="work_status"> <b> Work type</b></label>
+                    <br>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Work Type</label>
+                        <select class="form-select" id="ever_married">
+                            <option selected>Choose...</option>
+                            <option value="1">Govt Job</option>
+                            <option value="2">Never_worked</option>
+                            <option value="3">Private</option>
+                            <option value="4">Self-employed</option>
+                            <option value="5">Children</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="parameters">
+                    <label for="residence_type"> <b>Residence Type</b></label>
+                    <br>
+
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Residence Type</label>
+                        <select class="form-select" id="residence_type">
+                            <option selected>Choose...</option>
+                            <option value="1">Rural</option>
+                            <option value="2">Urban</option>
+
+
+                        </select>
+                    </div>
+                    <div>
+
+
+                        <div class="parameters">
+                            <label for="smoking_status"> <b>Smoking Status</b></label>
+
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Smoking</label>
+                                <select class="form-select" id="smoking_status">
+                                    <option selected>Choose...</option>
+                                    <option value="1">Unknown </option>
+                                    <option value="2">formerly smoked</option>
+                                    <option value="2">never smoked</option>
+                                    <option value="2">currently smokes</option>
+
+
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="parameters">
+
+                            <label for="smoking_status"> <b>Average Glucose Level</b></label>
+
+                            <div class="input-group mb-3" id="smoking_status">
+                                <span class="input-group-text" id="basic-addon1">Average Glucose Level</span>
+                                <input type="text" class="form-control" placeholder="Glucose content" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+
+
+                        </div>
+                        <div class="parameters">
+                            <div class="input-group mb-3" id="smoking_status">
+                                <span class="input-group-text" id="basic-addon1">BMI</span>
+                                <input type="text" class="form-control" placeholder="BMI=weight(in kg)/ height(in cm)^2" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+                        </div>
+
+                        <div class="row center">
+
+                            <button type="submit" class="btn-small waves-effect waves-light orange">Predict Probability</button>
+                        </div>
+
+
+            </form>
+        </div>
+
+        
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+href="{{url_for('static', filename='styles/Bootstrap/css/bootstrap.min.css')}}">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/predict.css')}}">
+    <title>StrokeSavvy</title>
+    
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="{{url_for('static',filename='images/StrokeSavvy.png')}}" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle-o" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/home" class="underline">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/predict">Predictor</a></li>
+                    <li><a href="/helpline">Hospitals</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Predict Your Chances</h1>
+            <p>Patients who arrive at the emergency room within 3 hours of their first symptoms <br> often have less disability 3 months after a stroke than those who received delayed care.</p>
+
+        </div>
+
+    </section>
+
+    <!-- predictor -->
+
+    <section class="content">
+
+        <h3>Enter the following details</h3>
+
+        <div class="container">
+
+
+            <form action="/result" method="POST" class="d-flex justify-content-center align-items-center">
+                <div class="column">
+                    <div class="parameters">
+                        <label for="gender"><b>Gender</b></label>
+                        <br>
+
+                        <li>
+
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check " name="gender" id="g1" autocomplete="off"
+                                    value="1" checked>
+                                <label class="btn btn-outline-primary" for="g1">Male</label>
+
+                                <input type="radio" class="btn-check" name="gender" id="g2" autocomplete="off"
+                                    value="0">
+                                <label class="btn btn-outline-primary" for="g2">Female</label>
+
+
+                            </div>
+
+                        </li>
+
+                    </div><br>
+
+                    <div class="parameters">
+                        <label for="age"> <b> Age</b></label>
+                        <br>
+                        <li>
+
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="age" id="age1" autocomplete="off" value="0"
+                                    checked>
+                                <label class="btn btn-outline-primary" for="age1">0-18</label>
+
+                                <input type="radio" class="btn-check" name="age" id="age2" autocomplete="off" value="1">
+                                <label class="btn btn-outline-primary" for="age2">18-36</label>
+
+                                <input type="radio" class="btn-check" name="age" id="age3" autocomplete="off" value="2">
+                                <label class="btn btn-outline-primary" for="age3">36-54</label>
+
+                                <input type="radio" class="btn-check" name="age" id="age4" autocomplete="off" value="3">
+                                <label class="btn btn-outline-primary" for="age4">54-72</label>
+
+                                <input type="radio" class="btn-check" name="age" id="age5" autocomplete="off" value="4">
+                                <label class="btn btn-outline-primary" for="age5">72-90</label>
+
+                            </div>
+
+                        </li>
+                    </div><br>
+
+                    <div class="parameters">
+                        <label for="ever_married"> <b>Marriage Status</b><em>(ever married)</em> </label>
+                        <br>
+                        <li>
+
+
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="ever_married" id="m1" autocomplete="off"
+                                    checked value="1">
+                                <label class="btn btn-outline-primary" for="m1">Yes</label>
+
+                                <input type="radio" class="btn-check" name="ever_married" id="m2" autocomplete="off"
+                                    value="0">
+                                <label class="btn btn-outline-primary" for="m2">No</label>
+                            </div>
+
+
+                        </li>
+
+                    </div><br>
+
+                    <div class="parameters">
+                        <label for="hypertension"> <b>Hypertension</b></label>
+                        <br>
+                        <li>
+
+
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="hypertension" id="ht1" autocomplete="off"
+                                    checked value="1">
+                                <label class="btn btn-outline-primary" for="ht1">Yes</label>
+
+                                <input type="radio" class="btn-check" name="hypertension" id="ht2" autocomplete="off"
+                                    value="0">
+                                <label class="btn btn-outline-primary" for="ht2">No</label>
+                            </div>
+
+
+                        </li>
+
+                    </div><br>
+
+
+                    <div class="parameters">
+                        <label for="heart"> <b>Heart disease</b></label>
+                        <br>
+                        <li>
+
+
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="heart" id="h1" autocomplete="off" checked
+                                    value="1">
+                                <label class="btn btn-outline-primary" for="h1">Yes</label>
+
+                                <input type="radio" class="btn-check" name="heart" id="h2" autocomplete="off" value="0">
+                                <label class="btn btn-outline-primary" for="h2">No</label>
+                            </div>
+
+
+                        </li>
+
+                    </div><br>
+
+
+                    <div class="parameters">
+
+
+                        <label for="work_status"> <b> Work type</b></label>
+                        <br>
+                        <li id="work_status">
+
+                            <div style="font-size:75%;"class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="work_status" id="w1" autocomplete="off"
+                                    checked value="0">
+                                <label class="btn btn-outline-primary" for="w1">Govt Job</label>
+
+                                <input type="radio" class="btn-check" name="work_status" id="w2" autocomplete="off"
+                                    value="1">
+                                <label class="btn btn-outline-primary" for="w2">Never Worked</label>
+
+                                <input type="radio" class="btn-check" name="work_status" id="w3" autocomplete="off"
+                                    value="2">
+                                <label class="btn btn-outline-primary" for="w3">Private</label>
+
+                                <input type="radio" class="btn-check" name="work_status" id="w4" autocomplete="off"
+                                    value="3">
+                                <label class="btn btn-outline-primary" for="w4">Self-employed</label>
+
+                                <input type="radio" class="btn-check" name="work_status" id="w5" autocomplete="off"
+                                    value="4">
+                                <label class="btn btn-outline-primary" for="w5">Children</label>
+
+                            </div>
+
+                        </li>
+                    </div><br>
+
+
+                    <div class="parameters">
+                        <label for="residence_type"> <b>Residence Type</b></label>
+                        <br>
+
+                        <li id="residence_type">
+
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="residence_type" id="r1" autocomplete="off"
+                                    checked value="0">
+                                <label class="btn btn-outline-primary" for="r1">Rural</label>
+
+                                <input type="radio" class="btn-check" name="residence_type" id="r2" autocomplete="off"
+                                    value="1">
+                                <label class="btn btn-outline-primary" for="r2">Urban</label>
+
+                            </div>
+
+                        </li>
+                    </div><br>
+                    
+
+
+                        <div class="parameters ">
+                            <label for="smoking_status"> <b>Smoking Status</b></label>
+
+                            <li id="smoking_status">
+
+                                <div style="font-size:90%;"class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                    <input type="radio" class="btn-check" name="smoking_status" id="s1"
+                                        autocomplete="off" checked value="0">
+                                    <label class="btn btn-outline-primary" for="s1">Unknown </label>
+
+                                    <input type="radio" class="btn-check" name="smoking_status" id="s2"
+                                        autocomplete="off" value="1">
+                                    <label class="btn btn-outline-primary" for="s2">Formerly smoked</label>
+
+                                    <input type="radio" class="btn-check" name="smoking_status" id="s3"
+                                        autocomplete="off" value="2">
+                                    <label class="btn btn-outline-primary" for="s3">Never smoked</label>
+
+                                    <input type="radio" class="btn-check" name="smoking_status" id="s4"
+                                        autocomplete="off" value="3">
+                                    <label class="btn btn-outline-primary" for="s4">Currently smokes</label>
+
+                                </div>
+
+                            </li>
+                        </div><br>
+
+                    
+                    <div class="parameters">
+
+                        <label for="glucose"> <b>Average Glucose Level</b></label>
+
+                        <div class="input-group mb-3" id="glucose">
+                            <span class="input-group-text " id="basic-addon1">Average Glucose Level</span>
+                            <input id='glucose-input' type="number" step="0.01" min="0" class="form-control form-control-sm" placeholder="Glucose content"
+                                aria-label="Username" aria-describedby="basic-addon1" name="glucose" required />
+                        </div>
+
+
+                    </div><br>
+
+
+                    <div class="parameters">
+                        <label for="bmi"> <b>Body Mass index</b></label>
+                        <div class="input-group mb-3" id="bmi">
+                            <span class="input-group-text" id="basic-addon1">BMI</span>
+                            <input  id='bmi-input' type="number" min="0" step="0.01" class="form-control form-control-sm"
+                                placeholder="BMI=weight(in kg)/ height(in cm)^2" aria-label="Username"
+                                aria-describedby="basic-addon1" name="bmi" required />
+                        </div>
+                    </div><br>
+
+
+                    <button type="submit" id="btn-predict"class="btn btn-danger btn-lg">Predict Probability</button>
+
+                </div>
+            </form>
+        </div>
+
+
+    </section>
+
+
+    <!-- Javascript for Toggle menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
+</body>
+
+</html>

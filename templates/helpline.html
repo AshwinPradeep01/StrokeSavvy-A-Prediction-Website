@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Helpline</title>
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/helpline.css')}}">
+</head>
+
+<body>
+
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="{{url_for('static',filename='images/StrokeSavvy.png')}}" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle-o" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/home" class="underline">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/predict">Predictor</a></li>
+                    <li><a href="/helpline">Hospitals</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Helpline</h1>
+            <p>Less than 1% of stroke patients in India get treatment within golden window. Only 31 per cent people are aware of the golden window of four-and-a-half hours after an attack. After this, time loss is brain loss (damage). <br>
+
+                A stroke is a medical emergency and with the stroke incidence going up steadily, Emergency Helpline- <br> <b style="font-size: 170%;"> Call 112 or 102 </b>  immediately.</p>
+
+        </div>
+
+
+    </section>
+
+    <div class="flex-table">
+        <table style="width:100%">
+            <tr>
+                <th>Hospital Name</th>
+                <th>Address</th>
+                <th>Emergency contacts</th>
+            </tr>
+            <tr>
+                <td>Medanta - The Medicity, Gurugram</td>
+                <td>CH Baktawar Singh Road, Sector 38, Gurugram, Haryana 122001</td>
+                <td>0124 414 1414</td>
+            </tr>
+            <tr>
+                <td>Apollo Hospital</td>
+                <td>All over the country</td>
+                <td>1066(Emergency), 1860-500-1066(National)</td>
+            </tr>
+            <tr>
+                <td>Nanavati Super Specialty Hospital, Mumbai</td>
+                <td>Swami Vivekananda Rd, near LIC, LIC Colony, Suresh Colony, Vile Parle West, Mumbai, Maharashtra
+                    400056</td>
+                <td>For Emergency : +91 22 2626 7777, +91 22 2626 7500</td>
+            </tr>
+            <tr>
+                <td>Medica Superspecialty Hospital</td>
+                <td>127, Eastern Metropolitan Bypass, Nitai Nagar, Mukundapur, Kolkata, West Bengal 700099</td>
+                <td>033-66520000, 033-66520100</td>
+            </tr>
+            <tr>
+                <td>SIMS Hospital, Vadapalani, Chennai</td>
+                <td>Metro Station, No.1, Jawaharlal Nehru Rd, next to Vadapalani, Landmark:, Vadapalani, Chennai, Tamil
+                    Nadu 600026</td>
+                <td>044 2000 2001</td>
+            </tr>
+            <tr>
+                <td>BLK Super Speciality Hospital, New Delhi</td>
+                <td>Pusa Rd, Radha Soami Satsang, Rajendra Place, New Delhi, Delhi 110005</td>
+                <td>011 3040 3040</td>
+            </tr>
+            <tr>
+                <td>Kauvery Hospital</td>
+                <td>Chennai, Salem, Trichy(Heartcity, Cantonment, Tennur), Bangalore, Hosur</td>
+                <td>04272677777(Salem), 04440006000(Chennai), 08068016901(Banglore), 04344 272727(Hosur)</td>
+            </tr>
+
+            <tr>
+                <td>Indo American Hospital</td>
+                <td>Chemmanakary, Akkarappadam P.O, Vaikom, Kerala 686143</td>
+                <td>04829-217800</td>
+            </tr>
+
+
+
+
+
+
+        </table>
+    </div>
+
+
+
+
+
+
+
+    <!-- Javascript for Toggle menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
+</body>
+
+</html>

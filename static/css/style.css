@@ -1,0 +1,392 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #ffddff;
+    background-image: linear-gradient(0deg, #ffddff 0%, #ccffff 100%);
+    filter: blur(50%);
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("/static/images/stroke4.jpg");
+    background-position: center;
+    background-size: cover;
+}   
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 200px;
+
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+}
+.nav-links ul li::after{
+
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+    box-shadow: 0 0 5px rgb(238, 58, 58),
+                0 0 25px rgb(238, 58, 58);          
+}
+
+.underline{
+    font-size: large;
+    text-decoration: underline;
+    color: #f44336;
+}
+
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 60px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: white;
+    font-size: 18px;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border:1px solid #fff;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 2px;
+}
+
+.hero-btn:hover{
+    border: 1px solid rgb(238, 58, 58);
+    background: rgb(238, 58, 58);
+    box-shadow: 0 0 5px rgb(238, 58, 58),
+                0 0 25px rgb(238, 58, 58);
+    transition: 0.5s;
+}
+
+nav .fa{
+    display: none;  
+}
+
+@media( max-width: 700px){
+    .header{
+        background-position :center ;
+    }
+ 
+    .text-box h1 {
+        font-size: 150%;
+    }
+    .text-box p {
+        font-size: 100%;
+    }
+
+    .nav-links ul li{
+       display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgb(238, 58, 58);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    nav .fa{
+        display: block;
+        color: white;
+        margin:10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    .nav-links ul li::after{
+        transition: 0s;
+    }
+    p{
+        font-size: 10px;
+    }
+   
+}
+
+/* -----contents---------- */
+
+.contents{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    background-image: linear-gradient( rgba(0,0,0,0),rgba(0,0,0,0));
+    padding:5% 5% 0 5%;  
+}
+
+h1{
+    font-size: 36px;
+    font-weight:600 ;
+
+}
+.contents p{
+    color:rgb(15, 15, 15);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+    display: flex;
+}
+
+h2{
+    margin-top: 5%;
+    text-align: left;
+    font-size: 4vh;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;       
+}
+
+.stroke-types{
+    flex-basis: 31%;
+    background: rgba(245, 238, 237, 0.8);
+    border :1px solid rgba(240, 193, 191, 0.8);
+    box-shadow: 0 0 5px rgba(240, 149, 144, 0.8); 
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.4s;   
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.stroke-types:hover{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:700px){
+    
+    .row{
+        flex-direction: column;
+    }
+}
+
+.types-img{
+    image-resolution :1080px;
+    width: 30%;
+    border: 1px solid black;
+    transition: all 0.5s ease-in-out;
+}
+.types-img:hover{
+    transform:scale(2);
+}
+
+@media screen and (max-width:700px){
+    .types{
+        image-resolution :1080px;
+        width: 100%;
+    }
+    
+}
+
+#stroke-risk{
+    margin: 2%;
+    justify-content: center;
+    display: block;
+    text-align: left;
+    
+}
+
+#stroke-risk p{
+    font-size: 18px;
+}
+.stroke-risk{
+        width: 90%;
+        justify-content: center;
+        flex-basis: 31%;
+        background: #fff3f3;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 40px;
+        box-sizing: border-box;
+        transition: 0.4s;
+}
+
+
+.stroke-risk:hover{
+
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);  
+}
+
+@media screen and (max-width:700px){
+    .stroke-risk{    
+        width: 95%;
+        justify-content: center;
+        flex-basis: 31%;
+        background: #fff3f3;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 40px;
+        box-sizing: border-box;
+        transition: 0.4s;
+    }
+}
+
+ul.list{
+    list-style: square;
+}
+
+.list li em{
+    font-weight: 1000;
+}
+
+#stroke-symp{
+    margin: 2%;
+    justify-content: center;
+    display: block;
+    text-align: left;
+}
+
+#stroke-diagnosis{
+    margin: 2%;
+    justify-content: center;
+    display: block; 
+    text-align: left;
+
+}
+#stroke-diagnosis p{
+    font-size: 1em;
+}
+
+.nested-list{
+    list-style-type: none;
+    text-align:justify;
+    padding: 0 20px 0;
+}
+
+.nested-list ol li{
+    list-style-type:none;
+    text-align:justify;
+    padding: 0 40px 0;
+}
+
+#stroke-treatment{
+    margin: 2%;
+    justify-content: center;
+    display: block; 
+    text-align: left;
+}
+em{
+    font-weight: 1000;
+}
+
+#treatment-images{
+    display: flex;
+    padding: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+figure{
+    border: 1px solid black;
+    margin:10px;
+    margin-left: 50px;
+    transition: all 0.5s ease-in-out;  
+}
+
+figure:hover{
+    background: rgba(0,0,0,0.7);
+    transform: scale(1.5);
+    color: #fff3f3;
+}
+
+#anuerysm-image{
+    margin-top: 20px;
+    position: relative;
+    width: 30%;
+}
+
+#anuerysm-treatment-image{  
+    padding-top: 10px;    
+    width: 30%;
+}
+
+#AVM-image{
+    image-resolution: 1080px;
+    width: 30%;  
+    padding-top: 10px;
+    padding-left: 5%;  
+}
+
+#stroke-prevention{
+    margin: 2%;
+    justify-content: center;
+    display: block;
+    text-align: left ;
+}
+#stroke-prevention p{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+
+    <title>StrokeSavvy</title>
+
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="{{url_for('static',filename='images/StrokeSavvy.png')}}" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times-circle-o" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/home" class="underline">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/predict">Predictor</a></li>
+                    <li><a href="/helpline">Hospitals</a></li>
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Learn About Stroke</h1>
+            <p>Stroke happens when the blood supply to part of the brain is cut off. <br> Without blood, brain cells can
+                be damaged or die.</p>
+            <a href="/predict" class="hero-btn">Know your chances...</a>
+        </div>
+
+    </section>
+
+    <!-- Content -->
+    <section class="contents">
+
+        <div class="container">
+
+            <h1>What is a Stroke?</h1>
+            <p>A stroke happens when there is a loss of blood flow to part of the brain. Your brain cells cannot get the
+                oxygen and nutrients they need from blood, and they start to die within a few minutes. This can cause
+                lasting brain damage, long-term disability, or even death.</p>
+
+            <h2>Types of Strokes</h2>
+            <div id="stroke-types" class="row">
+
+                <div class="stroke-types">
+                    <h3>Ischemic stroke </h3>
+                    <p>Ischemic stroke is caused by a blood clot that blocks or plugs a blood vessel in the brain. This
+                        is
+                        the most common type; about 80% of strokes are ischemic.</p>
+                </div>
+                <div class="stroke-types">
+                    <h3>Hemorrhagic stroke</h3>
+                    <p>Hemorrhagic stroke is caused by a weakened blood vessel that ruptures and bleeds into the
+                        surrounding
+                        brain. The blood accumulates and compresses the surrounding brain tissue.
+
+                    </p>
+                </div>
+                <div class="stroke-types">
+                    <h3>Transient Ischemic Attack (TIA)</h3>
+                    <p>Another condition that's similar to a stroke is a transient ischemic attack (TIA). It's sometimes
+                        called a "mini-stroke." TIAs happen when the blood supply to the brain is blocked for a short
+                        time.
+                        The damage to the brain cells isn't permanent, but if you have had a TIA, you are at a much
+                        higher
+                        risk of having a stroke.</p>
+                </div>
+
+            </div>
+            
+                <img src="{{url_for('static',filename='images/types.jpg')}}" alt="Types of stroke" class="types-img">
+            <br>
+
+            <h2>Factors Causing Stroke</h2>
+            <div id="stroke-risk" class="row">
+                <p>Certain factors can raise your risk of a stroke. The major risk factors include:</p>
+                <div class="stroke-risk stroke-types">
+                    <ul class="list">
+
+                        <li>High blood pressure<em>&nbsp;(Primary risk factor for a stroke)</em></li>
+                        <li>Diabetes</li>
+                        <li>Heart diseases</li>
+                        <li>Smoking</li>
+                        <li>Age</li>
+                        <li>A personal or family history of stroke or TIA</li>
+                        <li>Alcohol and illegal drug use</li>
+                        <li>High cholesterol</li>
+                        <li>Unhealthy diet and Obesity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Symptoms of stroke</h2>
+            <div id="stroke-symp" class="row">
+                <p>Certain factors can raise your risk of a stroke. The major risk factors include:</p>
+                <div class="stroke-risk stroke-types">
+                    <ul class="list-symp">
+
+                        <li>Sudden numbness or weakness of the face, arm, or leg (especially on one side of the
+                            body)<em>&nbsp;(Primary risk factor for a stroke)</em></li>
+                        <li>Sudden confusion, trouble speaking, or understanding speech</li>
+                        <li>Sudden trouble seeing in one or both eyes</li>
+                        <li>Sudden difficulty walking, dizziness, loss of balance or coordination</li>
+                        <li>Sudden severe headache with no known cause</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Diagonosis</h2>
+            <div id="stroke-diagnosis" class="row">
+                <p>To make a diagnosis, the following observation is done by the healthcare provider</p>
+                <div class="stroke-risk stroke-types">
+                    <ul class="list-diagnosis">
+                        <li>Asking about your symptoms and medical history </li>
+                        <li>Do a physical exam, including a check of
+                            <ul class="nested-list">
+                                <li>- Mental Alertness</li>
+                                <li>- Coordination and Balance</li>
+                                <li>- Any numbness or weakness in your face, arms, and legs</li>
+                                <li>- Any trouble speaking and seeing clearly</li>
+                            </ul>
+                        </li>
+                        <li>Run some tests, which may include
+                            <ul class="nested-list">
+
+                                <li>- Diagnostic imaging of the brain, such as a CT scan or MRI</li>
+                                <li>- Heart tests, such as Electrocardiogram (EKG) and echocardiography</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Treatment</h2>
+            <div id="stroke-treatment" class="row">
+                <p>Treatments for stroke include medicines, surgery, and rehabilitation. Which treatments you get depend
+                    on the type of stroke and the stage of treatment. The different stages are</p>
+                <div class="stroke-risk stroke-types">
+                    <ul class="list-diagnosis">
+                        <li>Acute treatment, to try to stop a stroke while it is happening</li>
+                        <ul class="nested-list">
+
+                            <li>- For <b>ischemic stroke</b> these are usully medicines, to dissolve the blood clot or
+                                blood thinner that prevents the existing clots from getting bigger. And a <em>carotid
+                                    artery disease*</em> , may also need a procedure to open your blocked carotid artery
+                            </li>
+                            <li>- For <b>hemorrhagic stroke</b> focus on finding the cause of bleeding in the brain and
+                                to control it. You may be given blood pressure medicine for higher blood pressure.</li>
+                            <ol>
+                                <li>-> If an aneurysm is the cause,then surgery to prevent further leaking of blood
+                                    should be done</li>
+                                <li>-> If an Arteriovenous Malformation (AVM) is the cause of a stroke, you may need an
+                                    AVM repair</li>
+                            </ol>
+                        </ul><br>
+
+                        <li>Stroke rehabilitation can help you relearn skills you lost because of the damage.</li>
+                        <li>Prevention, to prevent a first stroke or, if you have already had one, prevent another
+                            stroke</li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="treatment-images">
+                <legend>Aneurysm & Arteriovenous Malformation(AVM)</legend>
+                <figure>
+                    <img src="{{url_for('static',filename='images/aneurysm1.jpg')}}" alt="Aneurysm" id="anuerysm-image">
+                    <figcaption>Aneurysm</figcaption>
+                </figure>
+                <figure>
+                    <img src="{{url_for('static',filename='images/anuerysm-treatment.jpg')}}" alt="anuerysm-treatment"
+                        id="anuerysm-treatment-image">
+                    <figcaption>Anuerysm Treatment Methods</figcaption>
+                </figure>
+                <figure>
+                    <img src="{{url_for('static',filename='images/AVM.jpg')}}" alt="AVM-image" id="AVM-image">
+                    <figcaption>Arteriovenous Malformation(AVM)</figcaption>
+                </figure>
+            </div>
+           
+
+            <h2>Prevention</h2>
+            <div id="stroke-prevention" class="row">
+                <p>The best way to reduce the risk of a stroke is to address the underlying causes.People can achieve
+                    this by making lifestyle changes such as:</p>
+
+                <div class="stroke-risk stroke-types">
+                    <ul class="list-prevention">
+
+                        <li>Eating a healthful diet including plenty of fruits, vegetables, whole grains, nuts, seeds
+                            and legumes.</li>
+                        <li>Maintaining a moderate weight</li>
+                        <li>Exercising regularly</li>
+                        <li>Managing stress</li>
+                        <li>Not smoking tobacco</li>
+                        <li>Reducing Alcohol consumption</li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Javascript for Toggle menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
+</body>
+
+</html>
